@@ -9,5 +9,5 @@ class Player:
         self.main = None
 
     def roll(self, dice):
-        return self.dices.pop(dice)
+        return self.dices.pop(randint(1, dice))
         
