@@ -8,6 +8,8 @@ class Player:
         self.cards = cards
         self.main = None
 
-    def roll(self, dice):
-        return self.dices.pop(randint(1, dice))
-        
+    def roll(self, dice_id):
+        if len(self.dices) > 0:
+            # Remove dice from player's pool:
+            max_value = self.dices.pop(dice_id)
+            return randint(1, max_value)
